@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Home Page</title>
+    <link rel="icon" type="image/png" href="./netflix-icon.jpg"/>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Times New Roman', Times, serif;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+
+        #id1 {
+            width: 100%;
+            height: 100vh;
+            border: 5px solid rgb(46, 25, 25);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./netflixOriginal.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            backface-visibility: inherit;
+            padding: 10px 8%;
+            position: relative;
+            color: white;
+            border-left: none;
+            border-right: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        nav button {
+            border: 0px;
+            outline: 0px;
+            background-color: red;
+            color: white;
+            padding: 7px 20px;
+            font-size: 15px;
+            border-radius: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .langbutton {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            border: 1px solid white;
+            padding: 7px 10px;
+        }
+
+        .langbutton img {
+            width: 10px;
+            margin-left: 10px;
+        }
+
+        #id11 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #id12 h1 {
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 600;
+            max-width: 650px;
+        }
+
+        #id11 h3 {
+            font-weight: 400;
+            margin: 10px 0px;
+        }
+
+        .Email {
+            background: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .Email input {
+            flex: 1;
+            border: 0px;
+            outline: 0px;
+            margin-left: 20px;
+        }
+
+        .Email button {
+            background: red;
+            border: 0px;
+            outline: 0px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 15px 30px;
+        }
+
+        /* MailBox */
+        #mailBox {
+            width: 200px;
+            height: 50px;
+            background-color: black;
+            opacity: 50%;
+            color: white;
+            color: rgb(255, 255, 255);
+            margin: auto;
+        }
+
+        #GetStart {
+            height: 50px;
+            width: 100px;
+            background-color: red;
+            border-radius: 10px;
+
+
+        }
+
+        #id2 {
+            padding: 50px 12%;
+            font-size: 22px;
+            background-color: black;
+            color: white;
+            border-bottom: 5px solid rgb(62, 53, 53);
+        }
+
+        #id22 {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+
+        #id222 {
+            flex-basis: 50%;
+            margin-bottom: 20px;
+        }
+
+        #img-col1 {
+            flex-basis: 50%;
+            margin-bottom: 20px;
+        }
+
+        #img-col1 img {
+            display: block;
+            width: 90%;
+            margin: auto;
+        }
+
+        #id3 {
+            display: flex;
+            background-color: black;
+            color: white;
+            text-align: center;
+
+        }
+
+        #id332 {
+            padding-top: 10%;
+            font-size: 35px;
+            padding-right: 200px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+        }
+
+        #id4 {
+            display: flex;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-top: 5px solid rgb(62, 53, 53);
+            border-bottom: 5px solid rgb(62, 53, 53);
+        }
+
+        #id44 {
+            padding-left: 80px;
+            padding-top: 10%;
+            font-size: 35px;
+            padding-right: 200px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+        }
+
+        #id5 {
+            display: flex;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-bottom: 5px solid rgb(62, 53, 53);
+        }
+
+        #id552 {
+            padding-top: 10%;
+            font-size: 35px;
+            padding-right: 200px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+        }
+
+        #id6 {
+            /* display: flex; */
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-bottom: 5px solid rgb(62, 53, 53);
+        }
+
+        #id6 h1 {
+            text-align: center;
+            
+        }
+        #sm{
+            margin:auto;
+        }
+        #id552 {
+            padding-top: 10%;
+            font-size: 35px;
+            padding-right: 200px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+        }
+
+        .summ {
+            height: auto;
+            width: 1000px;
+            border: 1px solid white;
+            text-align: start;
+            margin: auto;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+            background-color: rgb(68, 65, 65);
+            font-size: 25px;
+        }
+        .summ:hover{
+            background-color: rgb(126, 122, 122);
+        }
+
+        #id7{
+            /* display: flex; */
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-bottom: 5px solid rgb(62, 53, 53);
+            
+        }
+        #id77{
+            margin:  auto;
+        }
+        #callOn:hover{
+            cursor: wait;
+        }
+        .id7721{
+            margin-top: 20px;
+        }
+        #id7 table{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+        #id7 table tr{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        footer{
+            background-color: black;
+        }
+        td{
+            color: white;
+            margin-top: 40px;
+            height: 20px;width: 300px;
+            text-align: left;
+        }
+        td a{
+            color: white;
+        }
+        .Lang{
+            height: 30px;width: 80px;
+            background-color: rgba(56, 55, 55, 0.7);
+            color: white;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="id" id="id1">
+        <nav><img class="logo" src="./logo.png" alt="">
+            <div>
+                <select name="" class="Lang" >
+                    <option value="" selected>English</option>
+                    <option value="" >Hindi</option>
+                </select>
+                <button>Sign In</button>
+            </div>
+        </nav>
+        <div class="id" id="id11">
+            <h1>Enjoy big movies, hit series and more from ₹ 149.</h1>
+            <h3>Join today. Cancel anytime.</h3>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <table id="sm">
+                <form action="" class="Email">
+                    <tr>
+                        <td id="mailBox"><input type="email" name="" id="" placeholder="Email address"
+                                style="background-color: rgba(235, 229, 229 ,0%);  color:white; border: none;"></td>
+                        <td id="GetStart">
+                            <button type="submit" id="submit" style="background-color: red;border: none;">Get Started
+                                <b>></b></button>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </div>
+
+    <div class="id" id="id2">
+        <div id="id22">
+            <div id="222" style="width: 500px; ">
+                <h1>Enjoy on your TV</h1>
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+            <div><img src="./img1.png" alt="" id="img-col1" width="350px" height="350px" style="margin-left: 200px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="id" id="id3">
+        <div id="id33"><img src="./img2.jpg" alt=""></div>
+        <div id="id332">
+            <h2>Download your shows to watch offline</h2>
+            <p>Save your favourites easily and always have something to watch.</p>
+        </div>
+    </div>
+    <div class="id" id="id4">
+        <div id="id44">
+            <h2>Watch everywhere</h2>
+            <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+        </div>
+        <div id="id442">
+            <img src="./img3.png" alt="">
+        </div>
+    </div>
+    <div class="id" id="id5">
+        <div id="id55"><img src="./img4.png" alt=""></div>
+        <div id="id552">
+            <h2>Create profiles for kids</h2>
+            <p>Send children on adventures with their favourite characters in a space made just for them—free with your
+                membership.</p>
+        </div>
+    </div>
+    <div class="id" id="id6">
+        <h1>Frequently Asked Questions</h1><br>
+        <div>
+            <div class="summ">
+                <details>
+                    <summary>What is Netflix?</summary>
+                    Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+                    documentaries and more – on thousands of internet-connected devices.
+                    -You can watch as much as you want, whenever you want, without a single ad – all for one low monthly
+                    price. There's always something new to discover, and new TV shows and movies are added every week!
+                </details>
+            </div>
+            <div class="summ">
+                <details>
+                    <summary>What is Server?</summary>
+                    -server is the place where all the resources are present.
+                    -It accepts all upcoming requests.
+                    -Compare to normal computer it has higher configuration.
+                    Ex- Google,Facebook,Amazone
+                </details>
+            </div>
+            <div class="summ">
+                <details>
+                    <summary>How much does Netflix cost?</summary>
+                    Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed
+                    monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.
+                </details>
+            </div>
+            <div class="summ">
+                <details>
+                    <summary>Where can I watch?</summary>
+                    Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at
+                    netflix.com from your personal computer or on any internet-connected device that offers the Netflix
+                    app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+                    You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads
+                    to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                </details>
+            </div>
+
+            <div class="summ">
+                <details>
+                    <summary>How do I cancel?</summary>
+                    Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your
+                    account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+                </details>
+            </div>
+
+            <div class="summ">
+                <details>
+                    <summary>What can I watch on Netflix?</summary>
+                    Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning
+                    Netflix originals, and more. Watch as much as you want, anytime you want.
+                </details>
+            </div>
+            <div class="summ">
+                <details>
+                    <summary>Is Netflix good for kids?</summary>
+                    The Netflix Kids experience is included in your membership to give parents control while kids enjoy
+                    family-friendly TV shows and films in their own space.
+
+                    Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of
+                    content kids can watch and block specific titles you don’t want kids to see.
+                </details>
+            </div>
+            <div><h3 style="padding-top:20px; padding-bottom: 20px;">Ready to watch? Enter your email to create or restart your membership.</h2></div>
+                <div style="padding-bottom: 20px;">
+                    <input type="search" name="" id="" style="height: 40px; width: 300px; background-color: rgb(48, 46, 46); color: white; padding-left: 10px; padding-top: 10px;border-radius: 5px;
+                    padding-bottom: 10px; border: 1px solid white;" placeholder="Email Address">
+                    <input type="submit" value="Get Started >" style="height: 40px; width: 150px; background-color: red; border-radius: 5px; border: none; font-size: large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;">
+                </div>
+        </div>
+    </div>
+    <footer id="id7">
+        <div class="id">
+            <table id="id77">
+                <tr class="id7721">
+                    <td id="callOn">Questions? Call 000-800-919-1694</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="id772">
+                    <td><a href="">FAQ</a></td>
+                    <td><a href="">
+                        Help Centre</a></td>
+                    <td><a href="">Account</a></td>
+                    <td><a href="">Media Centre</a></td>
+                </tr>
+                <tr class="id772">
+                    <td><a href="">Investor Relations</a></td>
+                    <td><a href="">
+                        Jobs</a></td>
+                    <td><a href="">
+                        Ways to Watch</a></td>
+                    <td><a href="">Terms of Use</a></td>
+                </tr>
+                <tr class="id772">
+                    <td><a href="">Privacy</a></td>
+                    <td><a href="">
+                        Cookie Preferences</a></td>
+                    <td><a href="">
+                        Corporate Information</a></td>
+                    <td><a href="">Contact Us</a></td>
+                </tr>
+                <tr class="id772">
+                    <td><a href="">Speed Test</a></td>
+                    <td><a href="">
+                        Legal Notices</a></td>
+                    <td><a href="">
+                        Only on Netflix</a></td>
+                    <td><a href=""></a></td>
+                </tr>
+                <tr class="id" id="">
+                    <td>
+                            <select name="" class="Lang">
+                                <option value="" class="Lang">English</option>
+                                <option value="" class="Lang">Hindi</option>
+                            </select>
+                                                    
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="id772">
+                    <td style="color: rgb(169, 171, 172);">Netflix India</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    
+    </footer>
+    
+</body>
+
+</html>
