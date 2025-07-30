@@ -252,3 +252,45 @@
   new PureCounter();
 
 })()
+
+
+   animateText();
+
+  function animateText() {
+    var a = $('#banimate');
+    var originalText = a.text();
+    var letters = originalText.split('');
+    var total = letters.length;
+
+    a.html('');
+
+    var i = 0;
+
+    function showNext() {
+      if (i < total) {
+        var letter = letters[i] === ' ' ? '&nbsp;' : letters[i];
+        a.append('<span class="flash">' + letter + '</span>');
+        setTimeout(function () {
+          var $span = a.find('.flash').eq(i);
+          $span.addClass('light');
+          
+          // Add fade out after visible for 1.5 sec
+          setTimeout(function () {
+            $span.addClass('fade-out');
+          }, 2000);
+
+          i++;
+          showNext();
+        }, 100);
+      } else {
+        // After whole text, wait for all fade-outs to finish, then restart
+        setTimeout(function () {
+          a.html('');
+          i = 0;
+          showNext();
+        }, 2500);
+      }
+    }
+
+    showNext();
+  }
