@@ -1460,12 +1460,12 @@ section .container {
     } 
     #animate-l-r  {
       position: relative;
-      width: fit-content;
+      width: -webkit-fill-available;
       border: 0;
-      right: 0px;
+      right: auto;
       margin: 0 auto;
       bottom: 10px;
-      left: 0;
+      left: auto;
     }
     #animate-l-r .footer-ani-flex{
       flex-direction: column-reverse;
